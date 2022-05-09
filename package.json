@@ -1,0 +1,41 @@
+{
+	"name": "dsr",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"watch": {
+		"autoprefix": {
+			"patterns": [
+				"style"
+			],
+			"extensions": ".css",
+			"quiet": false,
+			"verbose": true
+		}
+	},
+	"scripts": {
+		"watch:eleventy": "npx @11ty/eleventy --serve",
+		"watch:sass": "npx sass assets/scss/style.scss:assets/css/style.css --style=compressed --watch",
+		"start": "npm run watch:sass & npm run watch:eleventy",
+		"autoprefix": "npx postcss assets/css/style.css --use autoprefixer -d assets/css/",
+		"windows-start": "npx concurrently \"npm run watch:sass\" \"npm run watch:eleventy\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@11ty/eleventy": "latest",
+		"@11ty/eleventy-img": "latest",
+		"@11ty/eleventy-plugin-syntaxhighlight": "latest",
+		"autoprefixer": "latest",
+		"baselayer": "latest",
+		"concurrently": "latest",
+		"dotenv": "latest",
+		"eleventy-plugin-toc": "latest",
+		"markdown-it": "latest",
+		"markdown-it-anchor": "^8.6.3",
+		"npm-watch": "latest",
+		"postcss-cli": "latest",
+		"sass": "latest"
+	}
+}

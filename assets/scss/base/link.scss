@@ -1,0 +1,42 @@
+a {
+	-webkit-tap-highlight-color: transparent !important;
+}
+a:not([class]) {
+	background: linear-gradient(to right, transparent, transparent),
+		linear-gradient(to right, var(--color-link-hover), var(--color-link-hover));
+	background-size: 100% 0.08em, 0 0.08em;
+	background-position: 100% 100%, 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 300ms;
+	&:hover,
+	&:focus {
+		background-size: 0 0.08em, 100% 0.08em;
+	}
+}
+a:hover,
+a:focus {
+	.right {
+		transform: translate(0.15rem, 0);
+	}
+	.down {
+		transform: translate(0, 0.15rem);
+	}
+}
+.link-arrow {
+	pointer-events: none;
+	display: inline-block;
+	transition: transform 300ms;
+}
+:target {
+	outline: none;
+	position: relative;
+}
+:target:before {
+	color: var(--color-link-default);
+	content: "#";
+	font-size: 1rem;
+	position: absolute;
+	height: 1rem;
+	top: calc(50% - 0.5rem);
+	left: -1.5rem;
+}

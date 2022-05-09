@@ -1,0 +1,37 @@
+:root {
+	--color-primary: #ffc53d;
+	--color-primary-muted: #ffcf70;
+	--color-primary-intense: #ffbb00;
+
+	--color-secondary-muted: #181c25;
+	--color-secondary: #0f131a;
+	--color-secondary-intense: #07090d;
+
+	--color-accent-muted: #ac5353;
+	--color-accent: #993d3d;
+	--color-accent-intense: #832121;
+
+	--border-radius: 0.25rem;
+	--border-width: 2px;
+
+	--font-sans: "Titillium Web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+		"Helvetica Neue", sans-serif;
+	--font-display: "Refrigerator", "Refrigerator Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+html {
+	font-size: clamp(1rem, calc(0.9rem + 0.5vw), 1.3rem);
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-sans);
+	line-height: 1.5;
+	margin: auto 0;
+	color: var(--color-text);
+	background-color: var(--color-background);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}

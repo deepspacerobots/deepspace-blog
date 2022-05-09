@@ -1,0 +1,24 @@
+---
+layout: base.liquid
+---
+<article class="post post-full alignwide">
+
+	<header>
+		{% if image and description %}
+		{% image image description 'post-image' %}
+	{% endif %}
+		<h1>{{title}}</h1>
+		<div class="semibold">
+			{{ author }}&nbsp;&nbsp;|&nbsp;&nbsp;<time datetime="{{ date | date: '%Y-%m-%d' }}" >{{ date | date: "%b %e, %Y" }}</time>
+		</div>
+		{% if tags %}
+			{% include "tag-list.liquid", tagList:tags %}
+		{% endif %}
+	</header>
+	<main class="post-body">
+		{{ content }}
+	</main>
+	<aside class="post-nav">
+	{{ content | toc }}
+	</aside>
+</article>

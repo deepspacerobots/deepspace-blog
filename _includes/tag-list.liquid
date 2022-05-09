@@ -1,0 +1,15 @@
+
+<ul class="tag-list">
+	<li class="tag-icon">
+		{% icon 'price-tag-3-fill.svg' %}
+	</li>
+	{% for tag in tagList %}
+		{% if tag != 'posts' %}
+			<li>
+				<a href="/tags/{{ tag | url_encode }}">
+					{{ tag }}
+				</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>
