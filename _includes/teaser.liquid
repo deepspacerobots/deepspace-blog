@@ -1,0 +1,33 @@
+<article class="post post-teaser type-{{ post.data.type }}">
+	<header>
+		<h2>
+			<a href="{{ post.url }}" title="{{ post.data.data.title }}">
+				{{post.data.title}}
+				<span class="link-arrow right">→</span>
+			</a>
+		</h2>
+		<time class="semibold post-details" datetime="{{ post.data.date | date: '%Y-%m-%d' }}" >{{ post.data.date | date: "%b %e, %Y" }}</time>
+		<div class="post-description">
+			{{ post.data.description }}
+		</div>
+	</header>
+	{% if post.data.featuredImage and post.data.description %}
+		<a href="{{ post.url }}" class="post-link" >
+			{% image post.data.featuredImage, post.data.description, 'post-image' %}
+		</a>
+	{% endif %}
+	{% if post.data.tags and showTags %}
+		{% include "tag-list.liquid", tagList:post.data.tags %}
+	{% endif %}
+	{% if showType  and post.data.typeIcon and post.data.type %}
+		<div class="post-type">
+			<div class="type-icon">
+				{% icon post.data.typeIcon %}
+			</div>
+			<div class="type-name">
+				{{ post.data.type }}
+			</div>
+		</div>
+	{% endif %}
+	
+</article>

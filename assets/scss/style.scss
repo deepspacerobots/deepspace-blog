@@ -1,4 +1,4 @@
-@import "../../node_modules/baselayer/dist/style";
+@import "../../node_modules/baselayer.css/dist/baselayer";
 
 @import "base/code";
 @import "base/base";
@@ -9,6 +9,7 @@
 @import "base/buttons";
 
 @import "components/tag-list";
+@import "components/post-teaser";
 
 @import "pages/home";
 @import "pages/posts";

@@ -3,8 +3,10 @@
 	grid-template-columns: var(--space-sm) 1fr var(--space-sm);
 	grid-auto-rows: min-content;
 	row-gap: var(--space-md);
+	* {
+		min-width: 0%;
+	}
 	> * {
-		min-width: 0;
 		grid-column: 2 / 3;
 		&.alignwide {
 			grid-column: 2 / 3;

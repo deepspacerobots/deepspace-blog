@@ -1,15 +1,18 @@
 :root {
-	--color-primary: #ffc53d;
-	--color-primary-muted: #ffcf70;
-	--color-primary-intense: #ffbb00;
+	--color-primary: #00796b;
+	--color-primary-muted: #00796b;
+	--color-primary-intense: #00796b;
 
-	--color-secondary-muted: #181c25;
-	--color-secondary: #0f131a;
-	--color-secondary-intense: #07090d;
+	--color-secondary-muted: #0c2e4e;
+	--color-secondary: #0c2e4e;
+	--color-secondary-intense: #0c2e4e;
 
-	--color-accent-muted: #ac5353;
-	--color-accent: #993d3d;
-	--color-accent-intense: #832121;
+	--color-accent-muted: #00d4ff;
+	--color-accent: #00d4ff;
+	--color-accent-intense: #00d4ff;
+
+	--color-link-default: #007599;
+	--color-link-hover: #006282;
 
 	--border-radius: 0.25rem;
 	--border-width: 2px;
@@ -20,9 +23,11 @@
 		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-html {
-	font-size: clamp(1rem, calc(0.9rem + 0.5vw), 1.3rem);
-	scroll-behavior: smooth;
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-link-default: #00aed1;
+		--color-link-hover: #00d4ff;
+	}
 }
 
 body {

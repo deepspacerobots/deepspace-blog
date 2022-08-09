@@ -4,9 +4,9 @@
 		{% icon 'price-tag-3-fill.svg' %}
 	</li>
 	{% for tag in tagList %}
-		{% if tag != 'posts' %}
+		{% if tag != 'posts' and tag != 'projects' %}
 			<li>
-				<a href="/tags/{{ tag | url_encode }}">
+				<a href="/tags/{{ tag | url_encode | replace: '+', '%20'  }}">
 					{{ tag }}
 				</a>
 			</li>

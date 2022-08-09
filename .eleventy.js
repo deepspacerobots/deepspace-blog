@@ -41,7 +41,7 @@ module.exports = function (eleventyConfig) {
 
 async function imageShortcode(src, alt, classString) {
 
-	//console.log({ src, alt, classString });
+	console.log({ src, alt, classString });
 
 	let sizes = '(min-width: 1024px) 100vw, 50vw';
 	let srcPrefix = `./assets/img/`;

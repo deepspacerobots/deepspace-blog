@@ -1,5 +1,6 @@
 {
 	"tags": ["posts"],
 	"layout": "post.liquid",
-	"type": "post"
+	"type": "post",
+	"typeIcon": "align-left.svg"
 }

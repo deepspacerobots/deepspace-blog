@@ -9,26 +9,7 @@ description: A digital creative agency in Dallas, TX. We craft compelling online
 		{% if forloop.first == true %}
 			<hr>
 		{% endif %}
-		<article class="post post-teaser">
-			<header>
-				<h3>
-					{{post.data.title}}
-					<a href="{{ post.url }}" title="{{ post.data.data.title }}"><span class="link-arrow right">→</span></a>
-				</h3>
-				<div class="semibold post-details">
-					{{ post.data.author }}&nbsp;&nbsp;|&nbsp;&nbsp;<time datetime="{{ post.data.date | date: '%Y-%m-%d' }}" >{{ post.data.date | date: "%b %e, %Y" }}</time>
-				</div>
-				<div class="post-description">
-					{{ post.data.description }}
-				</div>
-			</header>
-			{% if post.data.image and post.data.description %}
-				{% image post.data.image post.data.description 'post-image' %}
-			{% endif %}
-			{% if post.data.tags %}
-				{% include "tag-list.liquid", tagList:post.data.tags %}
-			{% endif %}
-		</article>
+		{% include 'teaser.liquid', showTags:true, showType:false %}
 		<hr>
 	{% endfor %}
 </div>

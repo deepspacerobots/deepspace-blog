@@ -3,7 +3,7 @@ title: Freelancer UI design
 description: Freelancer UI design webpack progressive web app callback raspberry pi API JQuery.
 date: 2022-05-09 10:00:00
 author: Cody McCoderson
-image: freelancer-ui-design.jpg
+featuredImage: freelancer-ui-design.jpg
 tags:
   - DevOps
   - CyclOps

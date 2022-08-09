@@ -28,7 +28,7 @@
 		"@11ty/eleventy-img": "latest",
 		"@11ty/eleventy-plugin-syntaxhighlight": "latest",
 		"autoprefixer": "latest",
-		"baselayer": "latest",
+		"baselayer.css": "latest",
 		"concurrently": "latest",
 		"dotenv": "latest",
 		"eleventy-plugin-toc": "latest",

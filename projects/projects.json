@@ -1,0 +1,6 @@
+{
+	"tags": ["projects"],
+	"layout": "post.liquid",
+	"type": "project",
+	"typeIcon": "tools-fill.svg"
+}

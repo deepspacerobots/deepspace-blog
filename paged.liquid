@@ -1,16 +1,21 @@
 ---
 layout: base.liquid
+title: Tag - {{ tag }}
+description: Content tagged with "{{ tag }}"
 pagination:
   data: collections
-  size: 1000
+  size: 1
   alias: tag
 permalink: /tags/{{ tag }}/
 ---
-<h1>Tagged! “{{ tag }}”</h1>
+<h1>Tagged “{{ tag }}”</h1>
 
-<ol>
+
 {% assign taglist = collections[ tag ] %}
-{% for entry in taglist | reverse %}
-  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+{% for post in taglist | reverse %}
+		{% if forloop.first == true %}
+			<hr>
+		{% endif %}
+		{% include 'teaser.liquid', showTags:false, showType:true %}
+		<hr>
 {% endfor %}
-</ol>
